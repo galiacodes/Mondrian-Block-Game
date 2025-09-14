@@ -16,9 +16,7 @@ public class Block {
     //public static Random gen = new Random();
     public static Random gen = new Random(2);
 
-    /*
-     * These two constructors are here for testing purposes.
-     */
+
     public Block() {}
 
     public Block(int x, int y, int size, int lvl, int  maxD, Color c, Block[] subBlocks) {
@@ -36,8 +34,7 @@ public class Block {
     /*
      * Creates a random block given its level and a max depth.
      *
-     * xCoord, yCoord, size, and highlighted should not be initialized
-     * (i.e. they will all be initialized by default)
+     * (coords will all be initialized by default)
      */
     public Block(int lvl, int maxDepth) {
         this.level = lvl;
@@ -111,10 +108,7 @@ public class Block {
      * This includes, for each undivided Block:
      * - one BlockToDraw in the color of the block
      * - another one in the FRAME_COLOR and stroke thickness 3
-     *
-     * Note that a stroke thickness equal to 0 indicates that the block should be filled with its color.
-     *
-     * The order in which the blocks to draw appear in the list does NOT matter.
+     *     *
      */
     public ArrayList<BlockToDraw> getBlocksToDraw() {
         ArrayList<BlockToDraw> blocksToDrawList = new ArrayList<>();
@@ -133,9 +127,7 @@ public class Block {
     }
 
 
-    /*
-     * This method is provided and you should NOT modify it.
-     */
+
     public BlockToDraw getHighlightedFrame() {
         return new BlockToDraw(GameColors.HIGHLIGHT_COLOR, this.xCoord, this.yCoord, this.size, 5);
     }
@@ -200,9 +192,7 @@ public class Block {
     /*
      * Swaps the child Blocks of this Block.
      * If input is 1, swap vertically. If 0, swap horizontally.
-     * If this Block has no children, do nothing. The swap
-     * should be propagate, effectively implementing a reflection
-     * over the x-axis or over the y-axis.
+     * If this Block has no children, do nothing.
      *
      */
 
@@ -282,12 +272,6 @@ public class Block {
      *
      * If this Block can be smashed,
      * randomly generate four new children Blocks for it.
-     * (If it already had children Blocks, discard them.)
-     * Ensure that the invariants of the Blocks remain satisfied.
-     *
-     * A Block can be smashed iff it is not the top-level Block
-     * and it is not already at the level of the maximum depth.
-     *
      * Return True if this Block was smashed and False otherwise.
      *
      */
@@ -354,7 +338,6 @@ public class Block {
 
 
 
-    // These two get methods have been provided. Do NOT modify them
     public int getMaxDepth() {
         return this.maxDepth;
     }
@@ -364,10 +347,7 @@ public class Block {
     }
 
 
-    /*
-     * The next 5 methods are needed to get a text representation of a block.
-     * You can use them for debugging. You can modify these methods if you wish.
-     */
+
     public String toString() {
         return String.format("pos=(%d,%d), size=%d, level=%d"
                 , this.xCoord, this.yCoord, this.size, this.level);

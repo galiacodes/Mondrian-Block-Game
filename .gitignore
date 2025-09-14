@@ -27,3 +27,6 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+src/A3_MiniTester.java
+assignment3.iml
