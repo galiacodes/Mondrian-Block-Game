@@ -13,7 +13,6 @@ public class Block {
 
     private Block[] children; // {UR, UL, LL, LR}
 
-    //public static Random gen = new Random();
     public static Random gen = new Random(2);
 
 
