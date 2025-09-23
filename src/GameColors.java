@@ -7,7 +7,7 @@ public class GameColors {
     public final static Color BLUE = new Color(0, 102, 204);
     public final static Color YELLOW = new Color(252, 209, 42);
 
-//alternative palette
+//alternative color palette
 // public final static Color GREEN = new Color(0, 77, 64);
 // public final static Color RED = new Color(216, 27, 96);
 // public final static Color BLUE = new Color(30, 136, 229);
